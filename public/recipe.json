@@ -1,0 +1,57 @@
+[
+    {
+      "recipe_id": 1,
+      "recipe_image": "https://i.ibb.co/R4fjQXY/fried-vegetables-with-sauce-pan.jpg",
+      "name": "Spicy Chicken Stir-Fry",
+      "description": "A fiery fusion of tender chicken, colorful vegetables, and bold spices, perfect for spice enthusiasts!",
+      "ingredients": ["Chicken breast", "Bell peppers", "Onions", "Garlic", "Ginger", "Soy sauce", "Chili paste", "Vegetable oil"],
+      "preparing_time": 30,
+      "calories": 350
+    },
+    {
+      "recipe_id": 2,
+      "recipe_image": "https://i.ibb.co/cbpjc5h/brooke-lark-j-UPOXXRNdc-A-unsplash-1.jpg",
+      "name": "Mediterranean Quinoa Salad",
+      "description": "A refreshing blend of quinoa, cucumber, tomatoes, olives, and feta cheese tossed in a zesty lemon vinaigrette.",
+      "ingredients": ["Quinoa", "Cucumber", "Tomatoes", "Olives", "Feta cheese", "Lemon", "Olive oil", "Fresh parsley"],
+      "preparing_time": 20,
+      "calories": 250
+    },
+    {
+      "recipe_id": 3,
+      "recipe_image": "https://i.ibb.co/VBW44m4/pasta-4585804-1280.jpg",
+      "name": "Creamy Mushroom Risotto",
+      "description": "Velvety Arborio rice simmered with earthy mushrooms, onions, garlic, and Parmesan cheese until rich and creamy.",
+      "ingredients": ["Arborio rice", "Mushrooms", "Onion", "Garlic", "Vegetable broth", "White wine", "Butter", "Parmesan cheese"],
+      "preparing_time": 45,
+      "calories": 420
+    },
+    {
+      "recipe_id": 4,
+      "recipe_image": "https://i.ibb.co/zhrShsf/pexels-ella-olsson-1640771.jpg",
+      "name": "Crispy Baked Falafel",
+      "description": "Golden-brown chickpea patties seasoned with aromatic spices, baked until crispy perfection, served with tahini sauce.",
+      "ingredients": ["Chickpeas", "Onion", "Garlic", "Parsley", "Cumin", "Coriander", "Baking powder", "Tahini", "Lemon juice"],
+      "preparing_time": 40,
+      "calories": 280
+    },
+    {
+      "recipe_id": 5,
+      "recipe_image": "https://i.ibb.co/xHQ9wmZ/mariana-medvedeva-i-Nw-CO9yc-Blc-unsplash.jpg",
+      "name": "Berrylicious Smoothie Bowl",
+      "description": "A vibrant blend of mixed berries, banana, and yogurt topped with granola, nuts, and a drizzle of honey.",
+      "ingredients": ["Mixed berries", "Banana", "Greek yogurt", "Granola", "Almonds", "Honey"],
+      "preparing_time": 10,
+      "calories": 200
+    },
+    {
+      "recipe_id": 6,
+      "recipe_image": "https://i.ibb.co/vksrV4w/budi-puspa-wijaya-a2suz-ESBJZw-unsplash.jpg",
+      "name": "Zesty Lemon Garlic Shrimp",
+      "description": "Juicy shrimp marinated in a tangy lemon garlic sauce, grilled to perfection, and served with a side of steamed vegetables.",
+      "ingredients": ["Shrimp", "Lemon", "Garlic", "Olive oil", "Parsley", "Salt", "Black pepper", "Assorted vegetables"],
+      "preparing_time": 25,
+      "calories": 300
+    }
+  ]
+  
