@@ -1,13 +1,15 @@
 
 import './App.css'
+import { Header } from './componant/Header/Header'
+import { Navbar } from './componant/Navbar/Navbar'
 
 function App() {
  
 
   return (
     <>
-      <h1 className='bg-red-400'>Vite + React</h1>
-      
+     <Navbar></Navbar>
+      <Header></Header>
     </>
   )
 }
