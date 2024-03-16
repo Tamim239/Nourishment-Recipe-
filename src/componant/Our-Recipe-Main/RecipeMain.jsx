@@ -7,6 +7,8 @@ const notify = () => toast("Already exist!");
 
 export const RecipeMain = () => {
   const [card, setCard] = useState([]);
+  const [cart, setCart] = useState([]);
+
 
   const handleWantToCook = (data) => {
     const isExist = card.find((dt) => dt.recipe_id == data.recipe_id);
@@ -17,6 +19,16 @@ export const RecipeMain = () => {
     }
   };
 
+  const handlePreparing = (data) => {
+    // setCart([...cart, data])
+    const newCart = card.filter(c => c.recipe_id != data.recipe_id);
+    const newRemoveCart = card.find(rc => rc.recipe_id == data.recipe_id)
+    if(newCart){
+      setCart([...cart, newRemoveCart])
+      setCard(newCart)
+    }
+  }
+  console.log(cart)
   return (
     <div className="w-4/5 mx-auto">
       <div className="text-center">
@@ -30,7 +42,7 @@ export const RecipeMain = () => {
       <div className="flex justify-between my-10">
         <CardsContainer handleWantToCook={handleWantToCook}></CardsContainer>
         <ToastContainer />
-        <CartsContainer card={card}></CartsContainer>
+        <CartsContainer card={card} cart={cart} handlePreparing={handlePreparing}></CartsContainer>
       </div>
     </div>
   );

@@ -1,6 +1,5 @@
 import PropTypes from "prop-types";
-export const CartsContainer = ({card}) => {
-
+export const CartsContainer = ({card, handlePreparing, cart}) => {
   return (
     <div className="w-2/5 ml-5 bg-base-100  p-2 border rounded-2xl">
       <h1 className="text-center text-2xl font-semibold p-5 border-b ">
@@ -19,7 +18,7 @@ export const CartsContainer = ({card}) => {
             </tr>
           </thead>
           <tbody className="pr-5 ">
-            {/* row 1 */}
+            {/* row */}
             {
               card.map((card, index) => <tr key={card.id}>
                 <th>{index + 1}</th>
@@ -27,7 +26,7 @@ export const CartsContainer = ({card}) => {
                 <td>{card.preparing_time} minutes</td>
                 <td>400 calories</td>
                  <td> 
-                  <button className="btn rounded-full bg-[#0BE58A] text-xs">
+                  <button onClick={()=>handlePreparing(card)} className="btn rounded-full bg-[#0BE58A] text-xs">
                     Preparing
                   </button>
                   </td>
@@ -38,7 +37,7 @@ export const CartsContainer = ({card}) => {
         </table>
       </div>
       <h1 className="text-center text-2xl font-semibold p-5 border-b ">
-        Currently cooking: 02
+        Currently cooking: {cart.length}
       </h1>
       <div>
         <table className="table">
@@ -49,20 +48,19 @@ export const CartsContainer = ({card}) => {
               <th>Name</th>
               <th>Time</th>
               <th>Calories</th>
-              <th></th>
             </tr>
           </thead>
           <tbody>
-            {/* row 1 */}
-            <tr>
-              <th>1</th>
-              <td>Chicken Caesar Salad</td>
-              <td>20 minutes</td>
-              <td>400 calories</td>
-               <td> <button className="btn rounded-full bg-[#0BE58A] text-xs">
-                  Preparing
-                </button></td>
-            </tr>
+            {/* row */}
+
+            {
+              cart.map((ct, index)=> <tr key={ct.recipe_id}>
+                <th>{index + 1}</th>
+                <td>{ct.name}</td>
+                <td>{ct.preparing_time} minutes</td>
+                <td>{ct.calories} calories</td>
+              </tr>)
+            }
           </tbody>
         </table>
       </div>
@@ -75,5 +73,7 @@ export const CartsContainer = ({card}) => {
 };
 
 CartsContainer.propTypes ={
-  card: PropTypes.array
+  card: PropTypes.array,
+  handlePreparing: PropTypes.func,
+  cart: PropTypes.array
 }
