@@ -34,7 +34,7 @@ export const RecipeMain = () => {
   }
   console.log(cart)
   return (
-    <div className=" md:w-4/5 mx-auto">
+    <div className=" md:w-4/5 max-sm:my-5 mx-auto">
       <div className="text-center">
         <h1 className="text-3xl font-semibold">Our Recipes</h1>
         <p className="md:w-2/3 mx-auto">
