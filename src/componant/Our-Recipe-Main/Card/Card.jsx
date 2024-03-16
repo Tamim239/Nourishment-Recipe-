@@ -21,7 +21,7 @@ export const Card = ({ card, handleWantToCook }) => {
           <h3 className="text-xl font-medium text-[#282828]">Ingredients: {ingredients.length}</h3>
           <ul className="list-disc ml-3">
             {
-              ingredients.map((ingre, index) =>  <li key={index}>{ingre}</li>)
+              ingredients.map((ing, index) =>  <li key={index}>{ing}</li>)
             }
           </ul>
           <hr />
