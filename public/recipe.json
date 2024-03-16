@@ -1,7 +1,7 @@
 [
     {
       "recipe_id": 1,
-      "recipe_image": "https://i.ibb.co/R4fjQXY/fried-vegetables-with-sauce-pan.jpg",
+      "recipe_image": "https://i.ibb.co/vksrV4w/budi-puspa-wijaya-a2suz-ESBJZw-unsplash.jpg",
       "name": "Spicy Chicken Stir-Fry",
       "description": "A fiery fusion of tender chicken, colorful vegetables, and bold spices, perfect for spice enthusiasts!",
       "ingredients": ["Chicken breast", "Bell peppers", "Onions", "Garlic", "Ginger", "Soy sauce", "Chili paste", "Vegetable oil"],
@@ -46,7 +46,7 @@
     },
     {
       "recipe_id": 6,
-      "recipe_image": "https://i.ibb.co/vksrV4w/budi-puspa-wijaya-a2suz-ESBJZw-unsplash.jpg",
+      "recipe_image": "https://i.ibb.co/VJ7vyTG/fried-vegetables-with-sauce-pan-1.jpg",
       "name": "Zesty Lemon Garlic Shrimp",
       "description": "Juicy shrimp marinated in a tangy lemon garlic sauce, grilled to perfection, and served with a side of steamed vegetables.",
       "ingredients": ["Shrimp", "Lemon", "Garlic", "Olive oil", "Parsley", "Salt", "Black pepper", "Assorted vegetables"],
