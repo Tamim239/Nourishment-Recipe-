@@ -8,6 +8,8 @@ const notify = () => toast("Already exist!");
 export const RecipeMain = () => {
   const [card, setCard] = useState([]);
   const [cart, setCart] = useState([]);
+  const [time, setTime] = useState(0);
+  const [calorie, setCalorie] = useState(0);
 
 
   const handleWantToCook = (data) => {
@@ -19,18 +21,20 @@ export const RecipeMain = () => {
     }
   };
 
-  const handlePreparing = (data) => {
+  const handlePreparing = (data, prepareTime, calories) => {
     // setCart([...cart, data])
     const newCart = card.filter(c => c.recipe_id != data.recipe_id);
     const newRemoveCart = card.find(rc => rc.recipe_id == data.recipe_id)
     if(newCart){
       setCart([...cart, newRemoveCart])
+      setTime(time + prepareTime)
+      setCalorie(calorie + calories)
       setCard(newCart)
     }
   }
   console.log(cart)
   return (
-    <div className="w-4/5 mx-auto">
+    <div className=" md:w-4/5 mx-auto">
       <div className="text-center">
         <h1 className="text-3xl font-semibold">Our Recipes</h1>
         <p className="md:w-2/3 mx-auto">
@@ -39,10 +43,10 @@ export const RecipeMain = () => {
           diverse range of dishes to satisfy every palate and occasion.{" "}
         </p>
       </div>
-      <div className="flex justify-between my-10">
+      <div className="flex flex-col md:flex-row justify-between my-5 md:my-10">
         <CardsContainer handleWantToCook={handleWantToCook}></CardsContainer>
         <ToastContainer />
-        <CartsContainer card={card} cart={cart} handlePreparing={handlePreparing}></CartsContainer>
+        <CartsContainer card={card} cart={cart} prepareTime={time} totalCalories={calorie} handlePreparing={handlePreparing}></CartsContainer>
       </div>
     </div>
   );

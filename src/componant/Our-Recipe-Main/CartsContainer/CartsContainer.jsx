@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
-export const CartsContainer = ({card, handlePreparing, cart}) => {
+export const CartsContainer = ({card, handlePreparing, cart, prepareTime, totalCalories}) => {
   return (
-    <div className="w-2/5 ml-5 bg-base-100  p-2 border rounded-2xl">
+    <div className="md:w-2/5 ml-5  p-2 border rounded-2xl">
       <h1 className="text-center text-2xl font-semibold p-5 border-b ">
         Want to cook: {card.length}
       </h1>
@@ -24,9 +24,9 @@ export const CartsContainer = ({card, handlePreparing, cart}) => {
                 <th>{index + 1}</th>
                 <td>{card.name.slice(0, 10)}</td>
                 <td>{card.preparing_time} minutes</td>
-                <td>400 calories</td>
+                <td>{card.calories} calories</td>
                  <td> 
-                  <button onClick={()=>handlePreparing(card)} className="btn rounded-full bg-[#0BE58A] text-xs">
+                  <button onClick={()=>handlePreparing(card, card.preparing_time, card.calories)} className="btn rounded-full bg-[#0BE58A] text-xs">
                     Preparing
                   </button>
                   </td>
@@ -64,9 +64,9 @@ export const CartsContainer = ({card, handlePreparing, cart}) => {
           </tbody>
         </table>
       </div>
-      <div className="text-right my-5">
-        <p>Total Time = 45 minutes</p>
-        <p>Total Calories = 1050 calories</p>
+      <div className="text-right my-5 p-5">
+        <p>Total Time = {prepareTime} minutes</p>
+        <p>Total Calories = {totalCalories} calories</p>
       </div>
     </div>
   );
@@ -75,5 +75,7 @@ export const CartsContainer = ({card, handlePreparing, cart}) => {
 CartsContainer.propTypes ={
   card: PropTypes.array,
   handlePreparing: PropTypes.func,
-  cart: PropTypes.array
+  cart: PropTypes.array,
+  totalCalories: PropTypes.number,
+  prepareTime: PropTypes.number
 }

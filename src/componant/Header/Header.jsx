@@ -2,13 +2,13 @@ import banner from "../../assets/banner.jpg";
 
 export const Header = () => {
   return (
-    <div className="w-4/5 mx-auto my-10">
+    <div className="md:w-4/5 mx-auto my:5 md:my-10">
       <div
         style={{ backgroundImage: `url(${banner})` }}
         className="h-screen w-full bg-cover bg-center flex items-center justify-center rounded-3xl"
       >
         <div className="text-white text-center space-y-5">
-          <h1 className="font-bold text-6xl leading-snug">
+          <h1 className="font-bold text-3xl md:text-6xl leading-snug">
             Discover an exceptional cooking class tailored for you!
           </h1>
           <p className="md:w-2/3 mx-auto">

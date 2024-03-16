@@ -6,12 +6,12 @@ export const Card = ({ card, handleWantToCook }) => {
   console.log(card.length);
   return (
     <div>
-      <div className="card card-compact bg-base-100 shadow-xl p-4 border rounded-2xl h-[700px]">
+      <div className="card card-compact p-4 border rounded-2xl h-[48rem]">
         <figure>
           <img
             src={recipe_image}
             alt="recipe"
-            className="h-48 w-full"
+            className="h-52 w-full rounded-3xl"
           />
         </figure>
         <div className="card-body space-y-2">
